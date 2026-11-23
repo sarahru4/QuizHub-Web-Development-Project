@@ -1,0 +1,324 @@
+
+* { box-sizing: border-box; 
+}
+body {
+  padding-top:90px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f8f9ff 0%, #e8eaf6 50%, #d1c4e9 100%);
+  background-size: cover; 
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+header{
+    position:fixed;
+	top:0;
+	left:0;
+	width:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 40px;
+    color:#fff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+    background-size:300% 300%;
+    animation: gradientFlow 8s ease-in-out infinite;
+    box-shadow:0 8px 32px rgba(0,0,0,.15);
+    overflow:hidden;
+    z-index:10;
+	width:100% !important
+}
+header::before{
+    content:"";
+    position:absolute;
+    inset:0 auto 0 -100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent);
+    animation: shimmerEffect 4s infinite;
+    pointer-events:none;
+}
+
+.logo{
+    font-weight:700;
+    letter-spacing:.2px;
+    display:flex;
+    align-items:center;
+    font-size: 25px;
+}
+.logo .logo-img{
+    max-height:45px;
+    width:auto;
+    object-fit:contain;
+    margin-right: 8px;
+}
+
+
+a.btn.signout{
+    background: rgba(255,255,255,0.2);
+    color:#fff;
+    padding:12px 24px;
+    border:2px solid rgba(255,255,255,0.3);
+    border-radius:25px;
+    font-weight:600;
+    font-size:16px;
+    transition:all .4s ease;
+    backdrop-filter: blur(10px);
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+a.btn.signout:hover{
+    background: rgba(255,255,255,0.3);
+    border-color:#fff;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+
+.content {
+  max-width: 700px;
+  margin: auto;
+  padding: 50px 40px;
+  background: rgba(0,0,0,0.5); 
+  border-radius: 14px;
+  margin-top:50px;
+}
+
+h1 {
+  font-size: 46px;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.btn:hover {
+  background: #1e40af;
+}
+
+.signup-text {
+  margin-top: 15px;
+  font-size: 16px;
+}
+.signup-text a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.hidden{
+	display:none;
+}
+
+
+.signup-box {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 30px 25px;
+  background: rgba(0,0,0,0.6); 
+  border-radius: 12px;
+  text-align: center;
+}
+
+
+.signup-box input[type="text"],
+.signup-box input[type="email"],
+.signup-box input[type="password"],
+.signup-box input[type="file"],
+.signup-box select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+
+.signup-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2563eb;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.signup-box button:hover {
+  background: #1e40af;
+}
+
+.topics-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  align-items: center;
+  gap: 25px;                 
+  margin: 15px 0 20px;
+  text-align: center;        
+}
+
+.topics-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.feedback-box {
+  width: 500px;             
+  margin: 60px auto;       
+  background: rgba(0, 0, 0, 0.7);
+  padding: 24px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.feedback-box h2 {
+  margin-bottom: 12px;
+}
+
+.feedback-box p {
+  margin: 8px 0;
+}
+
+.feedback-gif {
+  width: 200px;             
+  margin: 12px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.feedback-box form {
+  margin-top: 16px;
+  text-align: left;         
+}
+
+.feedback-box label {
+  display: block;
+  margin: 8px 0 4px;
+}
+
+.feedback-box textarea {
+  width: 100%;
+  min-height: 70px;
+  border-radius: 6px;
+  padding: 6px;
+  border: none;
+  resize: vertical;
+}
+
+.feedback-box button,
+.feedback-box .btn {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size:14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.login-role {
+  margin-top: -5px;   
+  margin-bottom: 15px; 
+}
+
+
+
+
+.contacts{
+ 
+ padding-left:20px;
+ padding-bottom:10px;
+}
+.copyright{
+ text-align:center;
+ padding: 20px;
+}
+#phone-icon {
+    height: 1.25em;
+    width: 1.25em;
+    margin-right: 0.1875em;
+   
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+ padding-bottom:10px;
+ padding-top:10px;
+ 
+}
+
+#email-icon {
+    height: 1.25em;
+    width: 1.25em;
+    margin-right: 0.3125em;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+ color: #fff;
+}
+
+.social-media {
+ display: flex;
+ justify-content: center; 
+ gap: 15px; 
+ margin-top: 15px;
+ 
+}
+
+.social-media img {
+ width: 30px; 
+ height: auto;
+ 
+}
+footer {
+ 
+  width: 100%;
+}
+.footer{
+ width: 100%;
+ padding: 20px 0;
+ text-align: left;
+ color: #fff;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #667eea 100%);
+ margin-top: 40px;
+ padding-bottom:0;
+   
+}
+.footer .email a {
+  color: #fff;          
+}
